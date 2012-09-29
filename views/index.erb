@@ -1,0 +1,5 @@
+<ul>
+  <% documents('articles').each do |page|%>
+      <li><a href="/articles/<%=page.alias%>"><%=page.name%></a></li>
+  <% end %>
+</ul>
