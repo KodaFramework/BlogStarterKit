@@ -6,7 +6,7 @@ Package the main koda repo as a gem:
 
 and install it:
 
-    gem install koda-0.0.1.gen
+    gem install koda-0.0.1.gem
 
 run shotgun or some other server.
 
