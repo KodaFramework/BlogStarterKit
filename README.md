@@ -2,6 +2,7 @@ koda-demo
 =========
 
 Package the main koda repo as a gem:
+
     gem build koda.gemspec
 
 and install it:

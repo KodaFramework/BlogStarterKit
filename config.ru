@@ -1,4 +1,5 @@
 require 'koda'
+#require File.dirname(__FILE__) + '/../projects/koda/lib/koda'
 set :views, "views"
 #
 # Add or modify these routes at your own discretion
@@ -49,7 +50,7 @@ end
 
 get '/:folder/:page?' do
   content_type :html
-  @current_page = document(params[:folder], params[:page])
+  @current_page = model.send(params[:folder].to_sym).find params[:page]
   if(@current_page)
     erb :article, :escape_html => true
   else
