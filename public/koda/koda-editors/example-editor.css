@@ -1,0 +1,72 @@
+.nicEdit-panelContain {
+    width: 100% !important;
+}
+
+.nicEdit-main {
+    min-height: 200px !important;
+}
+
+#error-form {
+    padding: 40px;
+    background: paleGoldenrod;
+}
+
+input, textarea, select {
+    width: 74% !important;
+}
+
+.spinner-form {
+    position: relative !important;
+    left: 93% !important;
+    top: -12px !important;
+}
+
+.form-horizontal .control-label {
+    width: 150px !important;
+    padding-top: 1px !important;
+    padding-right: 10px !important;
+}
+
+.help-inline {
+    clear: both;
+    float: right;
+    width: 80%;
+    font-size: smaller;
+    color: gray;
+}
+
+.richTextEditor {
+    position: relative;
+    left: 20%;
+    top: -20px;
+}
+
+.nicEdit-main img {
+    padding: 5px;
+    vertical-align: top;
+    float: left;
+    overflow: auto;
+}
+
+.uploadedImage {
+    float: right;
+    clear: both;
+    position: relative;
+    top: -74px;
+    right: 200px;
+    width: 140px;
+    height: 90px;
+}
+
+.no-wrap {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+#status {
+    float: right;
+    position: relative;
+    top: -23px;
+    right: 21px;
+    padding: 5px;
+}

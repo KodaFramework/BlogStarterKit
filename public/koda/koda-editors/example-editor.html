@@ -1,0 +1,93 @@
+<html>
+<head>
+    <!-- Required Stylesheets if you want the default form look and feel -->
+    <link rel="stylesheet" href="/koda/css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="koda-editor.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/koda/css/bootstrap-responsive.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="example-editor.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+    <!-- Required Scripts -->
+    <script src="/koda/scripts/plugins/json2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/koda/scripts/plugins/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/koda/scripts/plugins/nicEdit.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/koda/scripts/plugins/spin.js" type="text/javascript"></script>
+    <script src="KodaEditor.js?1133" type="text/javascript" charset="utf-8"></script>
+    <script src="/koda/scripts/plugins/fileuploader.js?234234a7aa6d4aa" type="text/javascript"></script>
+    <script src="/koda/scripts/plugins/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="editor"></div>
+<script>
+
+    (function() {
+
+        // The Editor API has everything you need to talk to the Koda Back-end
+        var api = Editor.Api;
+        var isNew = api.isNew;
+        var url = PathHelper.getPath(api.itemUrl);
+
+        //
+        //  Get the Koda Type
+        //
+        api.get(api.typeUrl, function(kodaType) {
+
+            //
+            //  After Saving has occurred
+            //
+            var onUpdate = function(sdata){
+
+                if(sdata == "OK") {
+                    $('#status').text("Document Saved!");
+                    $('#status').show().fadeOut(2000);
+                } else {
+                    $('#status').text(sdata.error);
+                    $('#status').show().fadeOut(2000);
+                }
+
+            }
+
+            //
+            //  On Form Submit prepare the data and save via the API
+            //
+            var onSubmit = function(data) {
+
+                if(isNew) {
+
+                    //  Do something if the document is new
+
+                    var dataString = JSON.stringify(data, null, 2);
+
+                    //  We post the document when it is new
+                    api.post(url, dataString, onUpdate);
+
+                } else {
+
+                    // We put the document when it exists
+
+                    var dataString = JSON.stringify(data, null, 2);
+                    api.put(url, dataString, onUpdate);
+
+                }
+            }
+
+            //  Generate the form
+
+            var kodaForm = Editor.Form($('#editor'), kodaType, onSubmit);
+
+            //  Get the initial content and send it to the form load
+
+            api.get(url, function(content){
+                if(content != []) {
+                    kodaForm.load(content);
+                }
+            });
+
+        });
+
+    })();
+
+</script>
+</body>
+<html>

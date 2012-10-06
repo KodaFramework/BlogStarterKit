@@ -1,6 +1,8 @@
 require 'koda'
-#require File.dirname(__FILE__) + '/../projects/koda/lib/koda'
+
 set :views, "views"
+set :public_folder, "public"
+
 #
 # Add or modify these routes at your own discretion
 #
@@ -37,25 +39,30 @@ set :views, "views"
 #  end
 #
 #
+
 get '/' do
+
   # you can set a variable to access from your view.
   # example...
   # @current_page = filtered('pages', 'home')
   # OR
   # @current_page = document('pages', 'home')
+
+  @current_page = 'home_page'
   @title = "Koda Placeholder Page"
-  show :index
+  show :generic
 end
 
+get '/post/:alias?' do
+  @current_page = params[:alias]
+  @title = "Welcome to KodaCMS"
+  show :post
+end
 
-get '/:folder/:page?' do
-  content_type :html
-  @current_page = model.send(params[:folder].to_sym).find params[:page]
-  if(@current_page)
-    erb :article, :escape_html => true
-  else
-    redirect '/'
-  end
+get '/:page?' do
+  @current_page = params[:page]
+  @title = "Welcome to KodaCMS"
+  show :generic
 end
 
 run Sinatra::Application
