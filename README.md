@@ -140,6 +140,20 @@ produces...
    </div>
 ```
 
+> The default view-engine is [Embedded Ruby](http://en.wikipedia.org/wiki/ERuby), but you can configure your own [from these choices](http://sinatra-book.gittr.com/#templates)!
+> But we also provide a very versatile, yet simple client API to use in your views
+
+## Available content filters from within a view
+
+### Where
+`model.[collection].where {|item| item.someProp == 'something' && item.alias != nil } ` returns all items that match
+### Single
+`model.[collection].single {|item| item.someProp == 'something' } ` returns the first item that matches
+### All
+`model.[collection].all ` returns all items
+### By Ref
+`model.[collection].by_ref 'my_ref'` returns a reference document by referenceid
+
 ### Routes
 
 Your routes live in the config.ru file.
@@ -189,20 +203,6 @@ and do...
 	<%}%>
 <% end%>
 ```
-
-> The default view-engine is [Embedded Ruby](http://en.wikipedia.org/wiki/ERuby), but you can configure your own [from these choices](http://sinatra-book.gittr.com/#templates)!
-> But we also provide a very versatile, yet simple client API to use in your views
-
-## Available content filters from within a view
-
-### Where
-`model.[collection].where {|item| item.someProp == 'something' && item.alias != nil } ` returns all items that match
-### Single
-`model.[collection].single {|item| item.someProp == 'something' } ` returns the first item that matches
-### All
-`model.[collection].all ` returns all items
-### By Ref
-`model.[collection].by_ref 'my_ref'` returns a reference document by referenceid
 
 ### Creating Koda Types
 
