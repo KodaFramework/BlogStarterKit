@@ -44,7 +44,7 @@ If you are on Linux, you probably don't need any help
 
 Once you have this installed, simply...
 
-*   Clone this repo
+*   Clone any starter kit
 *	`gem install koda`
 *   `ruby data.rb restore data/kodacms`
 *	`shotgun -p 3000`
@@ -170,7 +170,7 @@ this will respond to, eg. '/about_us', '/contact_us'
 and means you can show the correct info based on the context
 
 ```html
-<% page = model.pages.find(@current_page) %>
+<% page = model.pages.by_ref @current_page %>
 	<% safe('No Content has been added yet'){%>
     <h2><%=page.title%></h2>
     <div>
