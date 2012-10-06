@@ -46,6 +46,7 @@ Once you have this installed, simply...
 
 *   Clone this repo
 *	`gem install koda`
+*   `ruby data.rb restore data/kodacms`
 *	`shotgun -p 3000`
 
 * 	Use your favourite editor to start developing
