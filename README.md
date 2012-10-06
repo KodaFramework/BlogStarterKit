@@ -31,36 +31,27 @@ In the pipeline
 
 ETA - October / November 2012
 
-### Getting started (Create starter kits or custom sites)
+### Getting started
 
-You can use Koda just like Wordpress or Umbraco by using the Koda gem and any of the starter pack gems.
-You can also follow a "code first" approach to create your own types and editors for a more unique editorial experience.
+Follow the guide here to install mongodb on your preferred platform
+http://www.mongodb.org/display/DOCS/Quickstart
 
-The only skills needed to able to develop a 'code-first' website on Koda is some very basic JSON and some knowledge of HTML.
-All Koda Types, Koda Filters are done using a simple JSON formatted file.
+If you are on windows you would need to install ruby [here](http://rubyinstaller.org/)
+Also install the Ruby DevKit [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
-Some knowledge of Javascript is needed to create your own DataTypes and Koda Editors, but we have added enough of our own so you probably won't need to.
-
-### Getting started with Code First Development
-
-> Follow the guide here to install mongodb on your preferred platform
-> http://www.mongodb.org/display/DOCS/Quickstart
-
-> If you are on windows you would need to install ruby [here](http://rubyinstaller.org/)
-> Also install the Ruby DevKit [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
-
-> If you are on Mac OSX, you won't need to install anything
-> If you are on Linux, you probably don't need any help
+If you are on Mac OSX, you won't need to install anything
+If you are on Linux, you probably don't need any help
 
 Once you have this installed, simply...
 
+*   Clone this repo
 *	`gem install koda`
 *	`shotgun -p 3000`
 
 * 	Use your favourite editor to start developing
-*	Go to http://localhost:3000 to see your instance
-*	Go to http://localhost:3000/explorer to register and start editing content
-*	Go to http://localhost:3000/console after registration to browse your data
+*	Go to `http://localhost:3000` to see your instance
+*	Go to `http://localhost:3000/explorer` to register and start editing content
+*	Go to `http://localhost:3000/console` after registration to browse your data
 
 ## Creating Layouts and Views
 
