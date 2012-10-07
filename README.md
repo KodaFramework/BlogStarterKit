@@ -62,6 +62,7 @@ If you are on Linux, you probably don't need any help
 Once you have this installed, simply...
 
 *   Clone any starter kit
+*   `bundle install`
 *	`gem install koda`
 *   `ruby data.rb restore data/kodacms`
 *	`shotgun -p 3000`
