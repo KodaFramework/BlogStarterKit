@@ -1,11 +1,12 @@
-# What is KodaCMS
+## What is the Blog Starter Kit?
+The Koda Framework BlogStarterKit is a very simple example of a website built using the Koda Framework. It aims to provide all the necessary 'know-how' to get you started building your own starter kits.
 
-KodaCMS is unlike any other CMS you might have come across. It manages your content first, thinking about where it will be used later.
-Create content in the Back-Office and present it on web page, mobile, tablet, flash, silverlight or Single page JS apps!
+## What is the Koda Framework?
 
-View our Trello board [here](https://trello.com/board/kodaexplorer/50506ef61302bbe50d6b0218)
-Twitter: @kodacms
-http://www.kodacms.org/
+The Koda Framework allows you to create websites, iphone apps, android apps, single page js apps, flash apps or silverlight apps and manages your data with a very simple and configurable admin section
+
+Twitter: @kodaframework
+http://www.kodaframework.org/
 
 ## Features
 
@@ -20,14 +21,11 @@ http://www.kodacms.org/
 ## Screenshot
 
 ## Explorer
-![Content Editing](https://raw.github.com/KodaCMS/Koda/master/screenshots/adding-content.png)
+![Content Editing](https://raw.github.com/KodaFramework/Gem/master/screenshots/adding-content.png)
 
-## Roadmap
-
-*	Publishing Workflow
-*   Preview
-
-### Getting started with a starter-kit
+---------------
+# Using a starter kit and deploying to heroku
+---------------
 
 * Clone any starter kit
 * Sign up at [Heroku](http://www.heroku.com/)
@@ -46,9 +44,11 @@ http://www.kodacms.org/
     -   At the top find your Mongo URI and note down the hostname, port and database
         This will be in the format (`mongodb://<dbuser>:<dbpassword>@<hostname>.mongolab.com:<port>/<database>`)
     -   From within your local folder type `heroku run console` to enter the console
-    -   Perform the restore `mongorestore -h <hostname>.mongolab.com:<port> -d <database> -u <the_username_you_created> -p <the_password_you_created> data/kodacms`
+    -   Perform the restore `mongorestore -h <hostname>.mongolab.com:<port> -d <database> -u <the_username_you_created> -p <the_password_you_created> data/koda`
 
-### Getting started with modifying or building a starter-kit
+-------------------
+# Using or Building a starter kit on your machine
+-------------------
 
 Follow the guide here to install mongodb on your preferred platform
 http://www.mongodb.org/display/DOCS/Quickstart
@@ -63,7 +63,7 @@ Once you have this installed, simply...
 
 *   Clone any starter kit
 *	`gem install koda`
-*   `ruby data.rb restore data/kodacms`
+*   `ruby data.rb restore`
 *	`shotgun -p 3000`
 
 * 	Use your favourite editor to start developing
@@ -179,7 +179,7 @@ this is a very simple example of a route...
 get '/blog/:author/:post/:?' do
   @author = params[:author]
   @post = params[:post]
-  @title = "Welcome to KodaCMS"
+  @title = "Welcome to the BlogStarterKit"
   show :mytemplate
 end
 ```
@@ -361,10 +361,11 @@ Loading from AJAX
 Most people want to 'set-up' or create their site on their local machine first and then migrate the content over to production
 This couldn't be simpler with koda...
 
-Set up your data and run the following command on your local machine when done...
-`ruby data.rb dump data/`
-Commit your files or zip them up and place them on production and run the following
-`ruby data.rb restore data/kodacms`
+Set up your data and run the following command on your local machine when done...   
+`ruby data.rb dump`
+
+Commit your files or zip them up and place them on production and run the following   
+`ruby data.rb restore`
 
 > This will backup /restore all your data and media to file.
 
@@ -389,6 +390,21 @@ Please note: You will need your current `MONGOLAB_URI` (from your Heroku configs
 *   Run a mongorestore of your locally backed up database to your new database (updating your connection info.)
 *   `$ mongorestore -h hostname.mongolab.com:port_number -d database_name -u username -p password /path/on/my/local/computer`
 *   `$ heroku maintenance:off`
+
+## In Progress / Roadmap
+
+*	Publishing Workflow
+*   Preview
+*	iPhone and Android starter kit
+	- no programming needed, point our app to your koda instance and manage the user interface and content from your admin section
+*	Koda Shop starter kit
+ 	- including Website, Google Checkout integration, iPhone and Android applications
+*	Support and Video Tutorials
+
+# Any Questions?
+
+>Koda on Twitter: @kodaframework
+>Marcel du Preez on Twitter: @marceldupreez
 
 ------------------
 
@@ -525,9 +541,4 @@ For example
 POST '/api/trucks/smallblueone?_method=DELETE' will be interpreted the same as
 DELETE '/api/trucks/smallblueone'
 `
-
-# Any Questions?
-
->KodaCMS on Twitter: @kodacms
->Marcel du Preez on Twitter: @marceldupreez
 

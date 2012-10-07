@@ -55,13 +55,13 @@ end
 
 get '/post/:alias?' do
   @current_page = params[:alias]
-  @title = "Welcome to KodaCMS"
+  @title = "Welcome to the BlogStarterKit"
   show :post
 end
 
 get '/:page?' do
   @current_page = params[:page]
-  @title = "Welcome to KodaCMS"
+  @title = "Welcome to the BlogStarterKit"
   show :generic
 end
 

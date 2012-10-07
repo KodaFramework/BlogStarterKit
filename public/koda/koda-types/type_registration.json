@@ -1,43 +1,43 @@
 [
     {
-        "group" : "custom",
-        "title" : "Custom",
+        "group" : "blog",
+        "title" : "BlogStarterKit",
         "types" : [
             {
-                "title" : "BlogStarterKit Author",
-                "description" :"Custom type for KodaCMS.org",
+                "title" : "Author",
+                "description" :"Custom type for KodaFramework.org",
                 "icon" : "/koda/images/layout_add.png",
                 "editor" : "/koda/koda-editors/generic-editor.html",
                 "type"	: "/koda/koda-types/custom-author.json",
                 "allowedin" : "collection"
             },
             {
-                "title" : "BlogStarterKit Blogpost",
-                "description" :"Custom type for KodaCMS.org",
+                "title" : "Blogpost",
+                "description" :"Custom type for KodaFramework.org",
                 "icon" : "/koda/images/layout_add.png",
                 "editor" : "/koda/koda-editors/generic-editor.html",
                 "type"	: "/koda/koda-types/custom-blogpost.json",
                 "allowedin" : "collection"
             },
             {
-                "title" : "BlogStarterKit Page",
-                "description" :"Custom type for KodaCMS.org",
+                "title" : "Page",
+                "description" :"Custom type for KodaFramework.org",
                 "icon" : "/koda/images/layout_add.png",
                 "editor" : "/koda/koda-editors/generic-editor.html",
                 "type"	: "/koda/koda-types/custom-page.json",
                 "allowedin" : "collection"
             },
             {
-                "title" : "BlogStarterKit Blog Archive Page",
-                "description" :"Custom type for KodaCMS.org",
+                "title" : "Blog Archive Page",
+                "description" :"Custom type for KodaFramework.org",
                 "icon" : "/koda/images/layout_add.png",
                 "editor" : "/koda/koda-editors/generic-editor.html",
                 "type"	: "/koda/koda-types/custom-blog-archive.json",
                 "allowedin" : "collection"
             },
             {
-                "title" : "BlogStarterKit Section",
-                "description" :"Custom type for KodaCMS.org",
+                "title" : "Content Section",
+                "description" :"Custom type for KodaFramework.org",
                 "icon" : "/koda/images/layout_add.png",
                 "editor" : "/koda/koda-editors/generic-editor.html",
                 "type"	: "/koda/koda-types/custom-section.json",

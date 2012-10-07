@@ -41,7 +41,7 @@
 			"title" : "Title",
 			"description" : "title of the page",
 			"control" : "input-text",
-			"properties" : "required placeholder='About KodaCMS'",
+			"properties" : "required placeholder='About Koda'",
 			"defaultValue" : ""
 		},
 		{
