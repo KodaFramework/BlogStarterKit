@@ -56,7 +56,6 @@ If you are on Linux, you probably don't need any help
     -   Add a new user in the users tab and remember the username and password you created.
     -   At the top find your Mongo URI and note down the hostname, port and database
         This will be in the format (`mongodb://<dbuser>:<dbpassword>@<hostname>.mongolab.com:<port>/<database>`)
-    -   From within your local folder type `heroku run console` to enter the console
     -   Perform the restore `mongorestore -h <hostname>.mongolab.com:<port> -d <database> -u <the_username_you_created> -p <the_password_you_created> data/koda`
 
 -------------
