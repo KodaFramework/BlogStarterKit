@@ -1,6 +1,6 @@
 require 'koda'
 
-set :views, "views"
+set :views, "templates"
 set :public_folder, "public"
 
 #
