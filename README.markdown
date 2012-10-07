@@ -23,6 +23,19 @@ http://www.kodaframework.org/
 ## Explorer
 ![Content Editing](https://raw.github.com/KodaFramework/Gem/master/screenshots/adding-content.png)
 
+-------------------
+# Prerequisites
+-------------------
+
+Follow the guide here to install mongodb on your preferred platform   
+http://www.mongodb.org/display/DOCS/Quickstart   
+
+If you are on windows you would need to install ruby 1.9.3 [here](http://rubyinstaller.org/)   
+Also install the Ruby DevKit [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)   
+
+If you are on Mac OSX, please make sure you are up to date with ruby 1.9.3   
+If you are on Linux, you probably don't need any help   
+
 ---------------
 # Using a starter kit and deploying to heroku
 ---------------
@@ -46,20 +59,9 @@ http://www.kodaframework.org/
     -   From within your local folder type `heroku run console` to enter the console
     -   Perform the restore `mongorestore -h <hostname>.mongolab.com:<port> -d <database> -u <the_username_you_created> -p <the_password_you_created> data/koda`
 
--------------------
-# Using or Building a starter kit on your machine
--------------------
-
-Follow the guide here to install mongodb on your preferred platform
-http://www.mongodb.org/display/DOCS/Quickstart
-
-If you are on windows you would need to install ruby [here](http://rubyinstaller.org/)
-Also install the Ruby DevKit [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
-
-If you are on Mac OSX, you won't need to install anything
-If you are on Linux, you probably don't need any help
-
-Once you have this installed, simply...
+-------------
+# Using or building a starter kit on your local machine
+-------------
 
 *   Clone any starter kit
 *	`gem install koda`
