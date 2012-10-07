@@ -4,7 +4,7 @@
 		{
 			"id" : "_koda_type",
 			"control" : "input-hidden",
-			"defaultValue" : "/koda/koda-types/custom-author.js"
+			"defaultValue" : "/koda/koda-types/custom-author.json"
 		},	
 		{
 			"id" : "_koda_editor",

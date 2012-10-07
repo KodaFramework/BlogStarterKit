@@ -1,7 +1,12 @@
 require 'koda'
+require 'dalli'
 
 set :views, "templates"
 set :public_folder, "public"
+
+# Flush the cache on app start up
+client = Dalli::Client.new
+client.flush()
 
 #
 # Add or modify these routes at your own discretion

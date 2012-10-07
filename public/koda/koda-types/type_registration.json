@@ -20,14 +20,6 @@
                 "allowedin" : "collection"
             },
             {
-                "title" : "News",
-                "description" :"Custom type for KodaFramework.org",
-                "icon" : "/koda/images/layout_add.png",
-                "editor" : "/koda/koda-editors/generic-editor.html",
-                "type"	: "/koda/koda-types/custom-news.json",
-                "allowedin" : "collection"
-            },
-            {
                 "title" : "Page",
                 "description" :"Custom type for KodaFramework.org",
                 "icon" : "/koda/images/layout_add.png",
